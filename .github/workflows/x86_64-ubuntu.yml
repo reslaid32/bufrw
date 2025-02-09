@@ -1,0 +1,18 @@
+name: (x86_64) On Ubuntu
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Performing test
+      run: sudo make all install check uninstall clean
