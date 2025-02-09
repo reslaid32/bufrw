@@ -235,7 +235,7 @@ BUFRW_PUBLIC_FUNC size_t bfbestbufsz(size_t fullsz) {
  */
 BUFRW_DESTRUCTOR
 BUFRW_PUBLIC_FUNC void bfcleanup(void) {
-    if (read_buffer_allocated  && read_buffer ) {
+    if (read_buffer_allocated  && read_buffer) {
         free(read_buffer);
         read_buffer_allocated = 0;
     }
